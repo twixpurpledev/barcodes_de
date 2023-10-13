@@ -1,0 +1,75 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.barcodes{
+  padding: 6mm 6mm 0 6mm;
+  width: 210mm;
+  height: 297mm;
+  border: 10px solid black;
+  position: relative;
+}
+.barcodes h5{
+  border-bottom: 1px solid #DDD;
+}
+.barcodes > img{
+  /* width: 40mm; */
+  width: calc(20% - 6px);
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+.barcodes > img:nth-of-type(5n+1){
+  border-left: 1px solid #DDD;
+}
+.barcodes .statiegeld > img{
+  width: 16mm;
+  padding: 1mm;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+
+@media print {
+  .barcodes{
+    border: none;
+  }
+}
